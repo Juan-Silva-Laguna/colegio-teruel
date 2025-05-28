@@ -1,84 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nosotros - I.E. Misael Pastrana Borrero</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        main {
-            padding: 40px;
-            background-color: white;
-            max-width: 900px;
-            margin: 20px auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1, h2 {
-            color: #003366;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/index.css" />
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ESCUDO.jpg-tbsrXTxvc3IjWmKY801I1N2gdxxBb3.jpeg" alt="Escudo Institución Educativa" class="logo" />
+                <div class="institution-name">
+                    Institución Educativa<br />
+                    <span style="font-size: 0.9rem;">Misael Pastrana Borrero</span>
+                </div>
+            </div>
 
-    <header>
-        <h1>Institución Educativa Misael Pastrana Borrero</h1>
-        <p>Formando con calidad, integridad y compromiso</p>
-    </header>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html">Inicio</a></li>
+                <li class="nav-item"><a href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a href="#programas">Programas</a></li>
+                <li class="nav-item"><a href="#admisiones">Admisiones</a></li>
+                <li class="nav-item"><a href="#noticias">Noticias</a></li>
+                <li class="nav-item"><a href="#contacto">Contacto</a></li>
+            </ul>
 
-    <main>
-        <h2>¿Quiénes somos?</h2>
-        <p>
-            La Institución Educativa Misael Pastrana Borrero es un centro educativo comprometido con la formación integral 
-            de niños, niñas y jóvenes, orientado a fomentar valores, conocimientos y competencias necesarias para 
-            afrontar los retos del mundo actual.
-        </p>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-        <h2>Misión</h2>
-        <p>
-            Brindar una educación de calidad, inclusiva e integral, que promueva el desarrollo humano, científico, 
-            artístico y social de nuestros estudiantes, en un ambiente de respeto, responsabilidad y trabajo en equipo.
-        </p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="about-section" id="nosotros" style="padding: 40px; max-width: 1000px; margin: auto;">
+            <h1>Sobre Nosotros</h1>
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ESCUDO.jpg-tbsrXTxvc3IjWmKY801I1N2gdxxBb3.jpeg" alt="Escudo Institucional" style="width: 150px; margin: 20px auto; display: block;" />
+            <p>
+                La Institución Educativa Misael Pastrana Borrero es un centro académico comprometido con la excelencia educativa,
+                formando estudiantes con valores éticos, competencias ciudadanas y conocimientos sólidos.
+            </p>
 
-        <h2>Visión</h2>
-        <p>
-            Ser reconocida como una institución líder en la formación de ciudadanos críticos, creativos y comprometidos 
-            con la transformación de su entorno, mediante procesos pedagógicos innovadores y participativos.
-        </p>
+            <h2>Misión</h2>
+            <p>
+                Ofrecer una formación integral que potencie las capacidades de cada estudiante, promoviendo el desarrollo
+                humano, el pensamiento crítico y el compromiso con la sociedad.
+            </p>
 
-        <h2>Valores Institucionales</h2>
-        <ul>
-            <li>Respeto</li>
-            <li>Responsabilidad</li>
-            <li>Solidaridad</li>
-            <li>Honestidad</li>
-            <li>Compromiso</li>
-        </ul>
+            <h2>Visión</h2>
+            <p>
+                Ser una institución líder en calidad educativa, reconocida por su innovación pedagógica, inclusión y formación de ciudadanos íntegros.
+            </p>
+
+            <h2>Valores Institucionales</h2>
+            <ul>
+                <li>Respeto</li>
+                <li>Responsabilidad</li>
+                <li>Solidaridad</li>
+                <li>Honestidad</li>
+                <li>Compromiso</li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        &copy; 2025 Institución Educativa Misael Pastrana Borrero. Todos los derechos reservados.
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Institución Educativa Misael Pastrana Borrero</h3>
+                    <p>
+                        Comprometidos con la formación integral de nuestros estudiantes, brindando educación de calidad con valores y excelencia académica.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">F</a>
+                        <a href="#" class="social-link">I</a>
+                        <a href="#" class="social-link">T</a>
+                        <a href="#" class="social-link">L</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+                        <li><a href="#programas">Programas Académicos</a></li>
+                        <li><a href="#admisiones">Proceso de Admisión</a></li>
+                        <li><a href="#calendario">Calendario Académico</a></li>
+                        <li><a href="#biblioteca">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#plataforma">Plataforma Virtual</a></li>
+                        <li><a href="#bienestar">Bienestar Estudiantil</a></li>
+                        <li><a href="#psicologia">Psicología</a></li>
+                        <li><a href="#enfermeria">Enfermería</a></li>
+                        <li><a href="#deportes">Deportes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Calle Principal #123, Ciudad</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: info@iemisaelpastrana.edu.co</p>
+                    <p>Horario: Lunes a Viernes 7:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Institución Educativa Misael Pastrana Borrero. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
