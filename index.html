@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institución Educativa Misael Pastrana Borrero</title>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-section">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ESCUDO.jpg-tbsrXTxvc3IjWmKY801I1N2gdxxBb3.jpeg" alt="Escudo Institución Educativa" class="logo">
-                <div class="institution-name">
-                    Institución Educativa<br>
-                    <span style="font-size: 0.9rem;">Misael Pastrana Borrero</span>
+                <div class="institution-info">
+                    <h1 class="institution-name">Institución Educativa</h1>
+                    <p class="institution-subtitle">Misael Pastrana Borrero</p>
                 </div>
             </div>
             
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a href="#nosotros">Nosotros</a></li>
-                <li class="nav-item"><a href="#programas">Programas</a></li>
-                <li class="nav-item"><a href="#admisiones">Admisiones</a></li>
-                <li class="nav-item"><a href="#noticias">Noticias</a></li>
-                <li class="nav-item"><a href="#contacto">Contacto</a></li>
+                <li class="nav-item"><a href="#inicio" onclick="scrollToSection('inicio')">Inicio</a></li>
+                <li class="nav-item"><a href="#nosotros" onclick="scrollToSection('nosotros')">Nosotros</a></li>
+                <li class="nav-item"><a href="#programas" onclick="scrollToSection('programas')">Programas</a></li>
+                <li class="nav-item"><a href="#admisiones" onclick="scrollToSection('admisiones')">Admisiones</a></li>
+                <li class="nav-item"><a href="#noticias" onclick="scrollToSection('noticias')">Noticias</a></li>
+                <li class="nav-item"><a href="#contacto" onclick="scrollToSection('contacto')">Contacto</a></li>
             </ul>
             
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" onclick="toggleMenu()" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,73 +36,363 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <section class="hero-section">
-            <h1 class="hero-title">Bienvenidos a Nuestra Institución</h1>
-            <p class="hero-subtitle">
-                Formando líderes del mañana con excelencia académica y valores sólidos
-            </p>
-            <a href="#admisiones" class="cta-button">Conoce Más</a>
-        </section>
-        
-        <!-- Aquí puedes agregar más contenido de la landing page -->
-        <div style="height: 400px; display: flex; align-items: center; justify-content: center; background-color: #f8fafc; border-radius: 10px;">
-            <p style="font-size: 1.2rem; color: #64748b;">Contenido principal de la página</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Institución Educativa Misael Pastrana Borrero</h3>
-                    <p>Comprometidos con la formación integral de nuestros estudiantes, brindando educación de calidad con valores y excelencia académica.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">F</a>
-                        <a href="#" class="social-link">I</a>
-                        <a href="#" class="social-link">T</a>
-                        <a href="#" class="social-link">L</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#nosotros">Acerca de Nosotros</a></li>
-                        <li><a href="#programas">Programas Académicos</a></li>
-                        <li><a href="#admisiones">Proceso de Admisión</a></li>
-                        <li><a href="#calendario">Calendario Académico</a></li>
-                        <li><a href="#biblioteca">Biblioteca Virtual</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Servicios</h3>
-                    <ul>
-                        <li><a href="#plataforma">Plataforma Virtual</a></li>
-                        <li><a href="#bienestar">Bienestar Estudiantil</a></li>
-                        <li><a href="#psicologia">Psicología</a></li>
-                        <li><a href="#enfermeria">Enfermería</a></li>
-                        <li><a href="#deportes">Deportes</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p>Dirección: Calle Principal #123, Ciudad</p>
-                    <p>Teléfono: (123) 456-7890</p>
-                    <p>Email: info@iemisaelpastrana.edu.co</p>
-                    <p>Horario: Lunes a Viernes 7:00 AM - 5:00 PM</p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">Excelencia Educativa desde 1985</div>
+                <h1 class="hero-title">
+                    Bienvenidos a Nuestra
+                    <span class="hero-highlight">Institución</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Formando líderes del mañana con excelencia académica y valores sólidos. 
+                    Comprometidos con el desarrollo integral de cada estudiante.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('admisiones')">
+                        Proceso de Admisión
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToSection('nosotros')">
+                        Conoce Más
+                    </button>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Estudiantes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85+</div>
+                    <div class="stat-label">Docentes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">39</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Tasa de Graduación</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Acerca de Nosotros</h2>
+                <p class="section-subtitle">
+                    Una institución comprometida con la formación integral de nuestros estudiantes
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon blue">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="about-card-title">Excelencia Académica</h3>
+                    <p class="about-card-text">
+                        Programas educativos de alta calidad que preparan a nuestros estudiantes para los desafíos del futuro.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon green">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="about-card-title">Valores Sólidos</h3>
+                    <p class="about-card-text">
+                        Formación en valores humanos, respeto, responsabilidad y compromiso social.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon purple">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="about-card-title">Desarrollo Integral</h3>
+                    <p class="about-card-text">
+                        Enfoque holístico que incluye desarrollo académico, deportivo, artístico y social.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programas" class="programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Programas Académicos</h2>
+                <p class="section-subtitle">
+                    Ofrecemos una educación completa desde preescolar hasta bachillerato
+                </p>
+            </div>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon pink">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="program-title">Preescolar</h3>
+                    <p class="program-description">
+                        Desarrollo de habilidades básicas y preparación para la educación formal
+                    </p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon blue">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="program-title">Básica Primaria</h3>
+                    <p class="program-description">
+                        Fundamentos académicos sólidos en todas las áreas del conocimiento
+                    </p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon green">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="program-title">Básica Secundaria</h3>
+                    <p class="program-description">
+                        Profundización en ciencias, humanidades y desarrollo del pensamiento crítico
+                    </p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon purple">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="program-title">Media Académica</h3>
+                    <p class="program-description">
+                        Preparación para la educación superior y desarrollo de competencias avanzadas
+                    </p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon orange">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="program-title">Educación Inclusiva</h3>
+                    <p class="program-description">
+                        Atención especializada para estudiantes con necesidades educativas especiales
+                    </p>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon indigo">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="program-title">Actividades Extracurriculares</h3>
+                    <p class="program-description">
+                        Deportes, artes, música y actividades culturales para el desarrollo integral
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admisiones" class="admissions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proceso de Admisión</h2>
+                <p class="section-subtitle">
+                    Te acompañamos en cada paso para que formes parte de nuestra familia educativa
+                </p>
+            </div>
+
+            <div class="admissions-content">
+                <div class="admissions-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Solicitud de Información</h3>
+                            <p class="step-description">
+                                Contacta con nosotros para recibir información detallada sobre nuestros programas
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Documentación</h3>
+                            <p class="step-description">
+                                Presenta los documentos requeridos según el nivel educativo al que deseas ingresar
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Entrevista</h3>
+                            <p class="step-description">
+                                Participa en una entrevista con nuestro equipo académico y psicológico
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Matrícula</h3>
+                            <p class="step-description">
+                                Completa el proceso de matrícula y únete a nuestra comunidad educativa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admissions-card">
+                    <div class="card-header">
+                        <h3 class="card-title">¿Listo para Comenzar?</h3>
+                        <p class="card-subtitle">Contáctanos para iniciar el proceso de admisión</p>
+                    </div>
+                    <div class="card-content">
+                        <button class="btn btn-primary btn-full">Solicitar Información</button>
+                        <button class="btn btn-outline btn-full">Agendar Visita</button>
+                        <div class="card-footer">
+                            <p>Admisiones abiertas todo el año</p>
+                            <p>Cupos limitados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="noticias" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Últimas Noticias</h2>
+                <p class="section-subtitle">
+                    Mantente informado sobre las actividades y logros de nuestra institución
+                </p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-badge">Académico</div>
+                    <h3 class="news-title">Excelentes Resultados en Pruebas Saber</h3>
+                    <p class="news-date">15 de Enero, 2024</p>
+                    <p class="news-description">
+                        Nuestros estudiantes obtuvieron puntajes sobresalientes en las pruebas estatales
+                    </p>
+                    <a href="#" class="news-link">
+                        Leer más <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-badge">Infraestructura</div>
+                    <h3 class="news-title">Nueva Infraestructura Deportiva</h3>
+                    <p class="news-date">10 de Enero, 2024</p>
+                    <p class="news-description">
+                        Inauguramos nuevas canchas deportivas para el desarrollo físico de nuestros estudiantes
+                    </p>
+                    <a href="#" class="news-link">
+                        Leer más <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-badge">Eventos</div>
+                    <h3 class="news-title">Feria de Ciencias 2024</h3>
+                    <p class="news-date">5 de Enero, 2024</p>
+                    <p class="news-description">
+                        Estudiantes presentaron proyectos innovadores en nuestra feria anual de ciencias
+                    </p>
+                    <a href="#" class="news-link">
+                        Leer más <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-header">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ESCUDO.jpg-tbsrXTxvc3IjWmKY801I1N2gdxxBb3.jpeg" alt="Escudo" class="contact-logo">
+                        <h3 class="contact-title">I.E. Misael Pastrana Borrero</h3>
+                    </div>
+                    <p class="contact-description">
+                        Comprometidos con la formación integral de nuestros estudiantes, brindando educación de calidad con valores y excelencia académica.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <h3 class="contact-section-title">Enlaces Rápidos</h3>
+                    <ul class="contact-list">
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Programas Académicos</a></li>
+                        <li><a href="#">Proceso de Admisión</a></li>
+                        <li><a href="#">Calendario Académico</a></li>
+                        <li><a href="#">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-services">
+                    <h3 class="contact-section-title">Servicios</h3>
+                    <ul class="contact-list">
+                        <li><a href="#">Plataforma Virtual</a></li>
+                        <li><a href="#">Bienestar Estudiantil</a></li>
+                        <li><a href="#">Psicología</a></li>
+                        <li><a href="#">Enfermería</a></li>
+                        <li><a href="#">Deportes</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-details">
+                    <h3 class="contact-section-title">Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Calle Principal #123, Ciudad</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@iemisaelpastrana.edu.co</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Lunes a Viernes<br>7:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-footer">
                 <p>&copy; 2024 Institución Educativa Misael Pastrana Borrero. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script src="./assets/js/index.js"></script>
 </body>
