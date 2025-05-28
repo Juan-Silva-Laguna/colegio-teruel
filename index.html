@@ -3,107 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias - I.E. Misael Pastrana Borrero</title>
-    <link rel="stylesheet" href="noticias.css">
+    <title>Institución Educativa Misael Pastrana Borrero</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-    <section class="noticias-section">
-        <div class="noticias-container">
-            <h2 class="titulo-seccion">Últimas Noticias</h2>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ESCUDO.jpg-tbsrXTxvc3IjWmKY801I1N2gdxxBb3.jpeg" alt="Escudo Institución Educativa" class="logo">
+                <div class="institution-name">
+                    Institución Educativa<br>
+                    <span style="font-size: 0.9rem;">Misael Pastrana Borrero</span>
+                </div>
+            </div>
             
-            <div class="noticia">
-                <h3 class="noticia-titulo">Ceremonia de Graduación 2025</h3>
-                <p class="noticia-fecha">Publicado el 25 de mayo de 2025</p>
-                <p class="noticia-contenido">
-                    El pasado viernes se llevó a cabo la ceremonia de graduación en el auditorio principal. ¡Felicitaciones a todos nuestros egresados!
-                </p>
-                <a href="#" class="leer-mas">Leer más</a>
-            </div>
-
-            <div class="noticia">
-                <h3 class="noticia-titulo">Nuevo Programa de Robótica</h3>
-                <p class="noticia-fecha">Publicado el 20 de mayo de 2025</p>
-                <p class="noticia-contenido">
-                    Nuestra institución lanza su nuevo programa de robótica educativa para estudiantes de secundaria. ¡Inscripciones abiertas!
-                </p>
-                <a href="#" class="leer-mas">Leer más</a>
-            </div>
-
-            <div class="noticia">
-                <h3 class="noticia-titulo">Jornada de Bienestar Estudiantil</h3>
-                <p class="noticia-fecha">Publicado el 15 de mayo de 2025</p>
-                <p class="noticia-contenido">
-                    Se llevó a cabo con éxito la jornada de salud y bienestar. Agradecemos la participación de todos los estudiantes y padres de familia.
-                </p>
-                <a href="#" class="leer-mas">Leer más</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a href="#nosotros">Nosotros</a></li>
+                <li class="nav-item"><a href="#programas">Programas</a></li>
+                <li class="nav-item"><a href="#admisiones">Admisiones</a></li>
+                <li class="nav-item"><a href="#noticias">Noticias</a></li>
+                <li class="nav-item"><a href="#contacto">Contacto</a></li>
+            </ul>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </section>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="hero-title">Bienvenidos a Nuestra Institución</h1>
+            <p class="hero-subtitle">
+                Formando líderes del mañana con excelencia académica y valores sólidos
+            </p>
+            <a href="#admisiones" class="cta-button">Conoce Más</a>
+        </section>
+        
+        <!-- Aquí puedes agregar más contenido de la landing page -->
+        <div style="height: 400px; display: flex; align-items: center; justify-content: center; background-color: #f8fafc; border-radius: 10px;">
+            <p style="font-size: 1.2rem; color: #64748b;">Contenido principal de la página</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Institución Educativa Misael Pastrana Borrero</h3>
+                    <p>Comprometidos con la formación integral de nuestros estudiantes, brindando educación de calidad con valores y excelencia académica.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">F</a>
+                        <a href="#" class="social-link">I</a>
+                        <a href="#" class="social-link">T</a>
+                        <a href="#" class="social-link">L</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#nosotros">Acerca de Nosotros</a></li>
+                        <li><a href="#programas">Programas Académicos</a></li>
+                        <li><a href="#admisiones">Proceso de Admisión</a></li>
+                        <li><a href="#calendario">Calendario Académico</a></li>
+                        <li><a href="#biblioteca">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#plataforma">Plataforma Virtual</a></li>
+                        <li><a href="#bienestar">Bienestar Estudiantil</a></li>
+                        <li><a href="#psicologia">Psicología</a></li>
+                        <li><a href="#enfermeria">Enfermería</a></li>
+                        <li><a href="#deportes">Deportes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Calle Principal #123, Ciudad</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: info@iemisaelpastrana.edu.co</p>
+                    <p>Horario: Lunes a Viernes 7:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Institución Educativa Misael Pastrana Borrero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
-🎨 CSS (noticias.css)
-css
-Copiar
-Editar
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8ff;
-}
-
-.noticias-section {
-    background-color: #e6f0ff;
-    padding: 50px 20px;
-}
-
-.noticias-container {
-    max-width: 900px;
-    margin: auto;
-    text-align: left;
-}
-
-.titulo-seccion {
-    color: #003366;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #003366;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.noticia {
-    background-color: #ffffff;
-    padding: 25px;
-    border-left: 5px solid #007BFF;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
-}
-
-.noticia-titulo {
-    color: #0056b3;
-    margin: 0 0 10px;
-}
-
-.noticia-fecha {
-    color: #7a8ca3;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.noticia-contenido {
-    color: #333;
-    font-size: 1rem;
-}
-
-.leer-mas {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.leer-mas:hover {
-    text-decoration: underline;
-}
