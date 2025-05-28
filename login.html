@@ -1,0 +1,93 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso | Portal Educativo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #e6f0ff, #d0ebff);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-card h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .school-logo {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .btn-login {
+            background-color: #3498db;
+            border: none;
+            font-weight: 600;
+        }
+
+        .btn-login:hover {
+            background-color: #2980b9;
+        }
+
+        .alert {
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <img src="./institucion.jpeg" class="school-logo" alt="Escuela">
+        <h2>misael pastrana  borrero</h2>
+        <p class="text-muted mb-4">Inicia sesión con tus credenciales institucionales</p>
+
+        
+
+        <form action="verificar_login.php" method="POST">
+            <div class="form-group text-left">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" class="form-control" required>
+            </div>
+            <div class="form-group text-left">
+                <label for="clave">Contraseña</label>
+                <input type="password" name="clave" id="clave" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-login btn-block text-white mt-3">Ingresar</button>
+        </form>
+
+        <div class="footer">
+        © 2025 Colegio misael pastrana borrero – Todos los derechos reservados.
+        </div>
+    </div>
+</body>
+</html>
